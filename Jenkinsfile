@@ -22,7 +22,7 @@ node {
       def resourceGroup = 'QuickstartJenkins-rg'
       def webAppName = 'mySimpleApp2'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'MqXdih~m1pCZA0_dRwFdp_yQBJo1vFirUm', usernameVariable: 'b686b976-9902-436a-afa5-6e0fb55238bf')]) {
+      withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'MqXdih~m1pCZA0_dRwFdp_yQBJo1vFirUm', usernameVariable: 'mySimpleApp2')]) {
        sh '''
           az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
           az account set -s $AZURE_SUBSCRIPTION_ID
